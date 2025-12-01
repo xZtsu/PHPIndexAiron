@@ -33,7 +33,7 @@ echo "Eemaldab ühikud teksti eest -ltrim()<pre>".ltrim($tekst2)."</pre>";
 echo "Eeemaldab teksti pärast -rtrim()<pre>".rtrim($tekst2)."</pre>";
 echo "<h3>Tekst kui massiv</h3>";
 
-echo "Tekst: ";
+echo "Tekst:";
 echo $tekst;
 echo "</br>";
 echo "võtab tekstist esimese tähe -tekst[0]= ".$tekst[0];            //A
