@@ -1,10 +1,11 @@
 <?php
 
+
 require('config.php');
 //kustutamine
 global $yhendus;
 if(isset($_REQUEST['kustuta'])){
-    $kask = $yhendus->prepare("DELETE FROM  auto WHERE autoID=?");
+    $kask = $yhendus->prepare("DELETE FROM auto WHERE autoID=?");
 
     $kask->bind_param("i",$_REQUEST["kustuta"]);
     $kask->execute();
