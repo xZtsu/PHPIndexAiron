@@ -10,7 +10,7 @@
     git config --global user.name "xZtsu"
     </li>
     <li>
-    git config --global user.email "xZtsu@gmail.com"<br>
+    git config --global user.email "airon.tatrik@gmail.com"<br>
     
     git config --global --list
     </li>
@@ -18,7 +18,7 @@
     <li>
      //ssh võti loomine
      <pre>
-     ssh-keygen -o -t rsa -C "xZtsu@gmail.com"
+     ssh-keygen -o -t rsa -C "airon.tatrik@gmail.com"
     </pre>
     
     <br>// võti salvestataks opilane/.shh kasuta
