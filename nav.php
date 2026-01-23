@@ -13,6 +13,7 @@
         <li><a href="haaletamine/haaletamine.php">Haaletamine</a></li>
         <li><a href="hanektoot/varsketeade.php" target="_blank">Anekdoot</a></li>
         <li><a href="content/JStoo.php" target="_blank">JSToo</a></li>
+        <li><a href="content/vaikefirma/Firma.php" target="_blank">väikefirma</a></li>
         <li>
             <a href="mobiilimall/esmaspaev.php" target="_blank">Mobiilimall</a>
         </li>

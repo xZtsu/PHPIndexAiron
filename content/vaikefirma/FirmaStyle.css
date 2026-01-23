@@ -1,0 +1,220 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d4a3e 100%);
+    margin: 0;
+    padding: 0;
+    color: #e8f5e9;
+    text-align: center;
+    min-height: 100vh;
+}
+
+h1 {
+    color: #81c784;
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+#listid {
+    text-align: center;
+}
+
+p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    max-width: 700px;
+    color: #c8e6c9;
+    margin: 0 auto;
+}
+
+.menu a {
+    text-decoration: none;
+    font-size: 1.15em;
+    color: #81c784;
+    font-weight: bold;
+    padding: 10px 18px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    display: inline-block;
+    margin: 5px;
+}
+
+.menu a:hover {
+    background: linear-gradient(135deg, #66bb6a 0%, #43a047 100%);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+#lehepakett {
+    display: flex;
+    align-items: flex-start;
+}
+
+#menyykiht {
+    width: 250px;
+    background: rgba(26, 26, 26, 0.8);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border-right: 2px solid #4caf50;
+    height: 100vh;
+    box-sizing: border-box;
+    position: sticky;
+    top: 0;
+}
+
+#menyykiht h2 {
+    margin-top: 0;
+    color: #81c784;
+    font-size: 1.5em;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+#menyykiht ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#menyykiht li {
+    margin-bottom: 12px;
+}
+
+#menyykiht a {
+    text-decoration: none;
+    color: #a5d6a7;
+    font-size: 1.1em;
+    display: block;
+    padding: 10px 12px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    border-left: 3px solid transparent;
+}
+
+#menyykiht a:hover {
+    background: rgba(76, 175, 80, 0.2);
+    color: #81c784;
+    border-left-color: #4caf50;
+    padding-left: 16px;
+}
+
+#sisukiht {
+    flex-grow: 1;
+    padding: 25px;
+    box-sizing: border-box;
+    text-align: center;
+    width: 100%;
+}
+
+.toode {
+    margin: 20px;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    border: 1px solid rgba(129, 199, 132, 0.3);
+    transition: all 0.3s ease;
+}
+
+.toode:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(129, 199, 132, 0.5);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+#sisukiht h2 {
+    color: #81c784;
+    margin-top: 0;
+    font-size: 2em;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+#sisukiht p, #sisukiht div, #sisukiht span {
+    font-size: 1.1em;
+    color: #c8e6c9;
+}
+
+#sisukiht a {
+    text-decoration: none;
+    color: #a5d6a7;
+    font-size: 1.05em;
+    margin-right: 15px;
+    transition: all 0.3s ease;
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+
+#sisukiht a:hover {
+    color: #66bb6a;
+    background: rgba(76, 175, 80, 0.1);
+}
+
+#sisukiht input[type="text"],
+#sisukiht input[type="number"],
+#sisukiht textarea {
+    width: 100%;
+    max-width: 700px;
+    padding: 12px 16px;
+    margin-bottom: 15px;
+    border: 2px solid rgba(129, 199, 132, 0.3);
+    border-radius: 8px;
+    font-size: 1.05em;
+    box-sizing: border-box;
+    background: rgba(255, 255, 255, 0.1);
+    color: #e8f5e9;
+    transition: all 0.3s ease;
+}
+
+#sisukiht input[type="text"]:focus,
+#sisukiht input[type="number"]:focus,
+#sisukiht textarea:focus {
+    outline: none;
+    border-color: #66bb6a;
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.1);
+}
+
+#sisukiht input::placeholder,
+#sisukiht textarea::placeholder {
+    color: rgba(200, 230, 201, 0.6);
+}
+
+#sisukiht textarea {
+    height: 140px;
+    resize: vertical;
+}
+
+#sisukiht input[type="submit"] {
+    background: linear-gradient(135deg, #66bb6a 0%, #43a047 100%);
+    border: none;
+    color: white;
+    padding: 12px 28px;
+    font-size: 1.1em;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+#sisukiht input[type="submit"]:hover {
+    background: linear-gradient(135deg, #4caf50 0%, #388e3c 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+#sisukiht input[type="submit"]:active {
+    transform: translateY(0);
+}
+
+#jalusekiht {
+    padding: 20px;
+    text-align: center;
+    background: rgba(26, 26, 26, 0.6);
+    border-top: 2px solid rgba(129, 199, 132, 0.3);
+    color: #a5d6a7;
+}
