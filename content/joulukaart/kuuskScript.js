@@ -112,10 +112,109 @@ function ehted(){
         })
     }
 }
+/*
 function puhasta(){
     const tahvel=document.getElementById("tahvel");
     if(tahvel.getContext){
         let t=tahvel.getContext("2d");
-        t.clearRect(0,0,1000,1000);
+        t.clearRect(0,0,1000,500);
     }
 }
+
+ */
+function joulutekst(){
+    const tahvel = document.getElementById("tahvel");
+    if(tahvel.getContext) {
+        let m = tahvel.getContext("2d");
+        m.font = "50px serif";
+        m.fillText("Ilusaid pühi!", 350, 50);
+    }
+}
+
+
+
+let animationId = null;
+let snowflakes = [];
+let snowCanvas = null;
+let snowContext = null;
+
+function lumi(){
+    const tahvel=document.getElementById("tahvel");
+
+    // Loome eraldi canvas lume jaoks
+    if(!snowCanvas){
+        snowCanvas = document.createElement('canvas');
+        snowCanvas.width = tahvel.width;
+        snowCanvas.height = tahvel.height;
+        snowCanvas.style.position = 'absolute';
+        snowCanvas.style.left = tahvel.offsetLeft + 'px';
+        snowCanvas.style.top = tahvel.offsetTop + 'px';
+        snowCanvas.style.pointerEvents = 'none'; // Ei sega klikkimist
+        tahvel.parentNode.appendChild(snowCanvas);
+        snowContext = snowCanvas.getContext('2d');
+    }
+
+    // Loome lumehelbed ainult kui neid pole
+    if(snowflakes.length === 0){
+        for(let i = 0; i < 50; i++){
+            snowflakes.push({
+                x: Math.random() * snowCanvas.width,
+                y: Math.random() * snowCanvas.height,
+                radius: Math.random() * 3 + 1,
+                speed: Math.random() * 2 + 1
+            });
+        }
+    }
+
+    // Animatsiooni funktsioon
+    function animate(){
+        // Puhastame lume canvas
+        snowContext.clearRect(0, 0, snowCanvas.width, snowCanvas.height);
+
+        // Joonistame ja liigutame lumehelbed
+        snowflakes.forEach(flake => {
+            flake.y += flake.speed;
+
+            if(flake.y > snowCanvas.height){
+                flake.y = -10;
+                flake.x = Math.random() * snowCanvas.width;
+            }
+
+            snowContext.beginPath();
+            snowContext.arc(flake.x, flake.y, flake.radius, 0, Math.PI * 2);
+            snowContext.fillStyle = "white";
+            snowContext.fill();
+        });
+
+        animationId = requestAnimationFrame(animate);
+    }
+
+    animate();
+}
+
+function puhasta(){
+    const tahvel=document.getElementById("tahvel");
+    if(tahvel.getContext){
+        let t=tahvel.getContext("2d");
+
+        // Peatame animatsiooni
+        if(animationId){
+            cancelAnimationFrame(animationId);
+            animationId = null;
+        }
+
+        // Eemaldame lume canvas
+        if(snowCanvas){
+            snowCanvas.remove();
+            snowCanvas = null;
+            snowContext = null;
+        }
+
+        // Tühjendame lumehelbed
+        snowflakes = [];
+
+        // Puhastame põhi-tahvli
+        t.clearRect(0, 0, tahvel.width, tahvel.height);
+    }
+}
+
