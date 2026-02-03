@@ -44,6 +44,13 @@ if (isset($_REQUEST["muutmisid"])) {
     <link rel="stylesheet" href="FirmaStyle.css">
 </head>
 <body>
+<nav class="menu">
+
+    <a href="Firma.php">Esileht</a>
+    <a href="Hinnakiri.php">Tooted</a>
+    <a href="Adminleht.php">Administraatori leht</a>
+
+</nav>
 <div id="lehepakett">
     <div id="menyykiht">
         <h2>Administraatori toodete leht</h2>
@@ -149,7 +156,7 @@ if (isset($_REQUEST["muutmisid"])) {
 
 
 </div>
-<a href="Firma.php">Esileht</a>
+
 
 
 <div id="jalusekiht">

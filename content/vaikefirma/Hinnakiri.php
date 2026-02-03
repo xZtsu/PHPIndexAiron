@@ -15,6 +15,12 @@ global $yhendus;
         <link rel="stylesheet" href="FirmaStyle.css">
     </head>
     <body>
+    <nav class="menu">
+
+        <a href="Firma.php">Esileht</a>
+        <a href="Hinnakiri.php">Tooted</a>
+        <a href="Adminleht.php">Administraatori leht</a>
+    </nav>
     <div id="lehepakett">
 
         <div id="sisukiht">
@@ -33,7 +39,7 @@ global $yhendus;
                     echo "<h3>"."Toode: ".htmlspecialchars($nimi)."</h3>";
                     echo "<p>"."Kirjeldus: ".htmlspecialchars($kirjeldus)."</p>";
                     echo "<strong>Hind: </strong>".htmlspecialchars($hind)." €";
-                    echo "<hr>";
+
                     echo "</div>";
                 }
 
@@ -47,7 +53,7 @@ global $yhendus;
     <a href="Firma.php">Esileht</a>
 
     <div id="jalusekiht">
-        Airon &copy;
+        Airon
     </div>
     </body>
     </html>
