@@ -1,0 +1,344 @@
+@charset "utf-8";
+
+/* ============================================
+   MODERN COLORFUL DESIGN
+   ============================================ */
+
+/* Reset and base setup */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+body {
+    /* Gradient background - purple to blue */
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background-attachment: fixed;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Main content wrapper */
+main {
+    flex: 1;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Header with glass effect */
+#header {
+    margin: 0 auto;
+    max-width: 100%;
+    padding: 20px 0;
+}
+
+/* Navigation - Modern card style */
+.nav {
+    font-size: 15px;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 15px;
+    margin: 0 10px 20px 10px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.nav ul li {
+    display: inline;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+.nav ul li a {
+    display: inline-block;
+    color: #667eea;
+    padding: 15px 25px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Hover effect with sliding background */
+.nav ul li a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, #667eea, #764ba2);
+    transition: left 0.3s ease;
+    z-index: -1;
+}
+
+.nav ul li a:hover::before {
+    left: 0;
+}
+
+.nav ul li a:hover {
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* Content card styling */
+h2 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #2d3748;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 20px;
+    margin: 0 10px 20px 10px;
+    border-radius: 15px;
+    border-left: 5px solid #667eea;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+/* Paragraph container with card style */
+p {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 25px;
+    margin: 0 10px 20px 10px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    font-size: 14px;
+    color: #2d3748;
+    line-height: 1.8;
+    max-width: 100%;
+    word-wrap: break-word;
+}
+
+/* Styled ordered list */
+ol {
+    margin: 0;
+    padding-left: 0;
+    list-style: none;
+    counter-reset: custom-counter;
+}
+
+ol li {
+    counter-increment: custom-counter;
+    position: relative;
+    padding: 15px 15px 15px 60px;
+    margin-bottom: 12px;
+    background: linear-gradient(135deg, #f6f8fb 0%, #ffffff 100%);
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    border-left: 3px solid transparent;
+}
+
+ol li::before {
+    content: counter(custom-counter);
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 16px;
+    box-shadow: 0 2px 10px rgba(102, 126, 234, 0.3);
+}
+
+ol li:hover {
+    transform: translateX(5px);
+    border-left-color: #667eea;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.15);
+}
+
+/* Links styling */
+p a {
+    color: #667eea;
+    text-decoration: none;
+    font-weight: 600;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s ease;
+    word-break: break-word;
+}
+
+p a:hover {
+    color: #764ba2;
+    border-bottom-color: #764ba2;
+}
+
+/* Footer - Modern gradient card */
+.nav2 {
+    font-size: 14px;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 15px 15px 0 0;
+    margin: 20px 10px 0 10px;
+    margin-top: auto;
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.nav2 p {
+    text-align: center;
+    color: #2d3748;
+    margin: 0;
+    padding: 20px;
+    background: transparent;
+    box-shadow: none;
+    word-wrap: break-word;
+    border-radius: 0;
+}
+
+.nav2 p a {
+    display: inline-block;
+    color: #667eea;
+    padding: 8px 16px;
+    text-decoration: none;
+    font-weight: 600;
+    margin: 0 5px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    background: rgba(102, 126, 234, 0.1);
+    border: none;
+}
+
+.nav2 p a:hover {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+.clear {
+    clear: both;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+
+/* Tablets */
+@media screen and (max-width: 768px) {
+    body {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    }
+
+    .nav ul {
+        justify-content: center;
+    }
+
+    h2 {
+        font-size: 20px;
+        padding: 18px;
+    }
+
+    p {
+        font-size: 15px;
+        padding: 20px;
+    }
+
+    ol li {
+        padding: 12px 12px 12px 55px;
+    }
+
+    ol li::before {
+        width: 32px;
+        height: 32px;
+        font-size: 14px;
+    }
+}
+
+/* Mobile phones */
+@media screen and (max-width: 480px) {
+    .nav, .nav2, h2, p {
+        margin: 0 5px 15px 5px;
+        border-radius: 12px;
+    }
+
+    .nav ul li a {
+        padding: 12px 18px;
+        font-size: 14px;
+    }
+
+    h2 {
+        font-size: 18px;
+        padding: 15px;
+    }
+
+    p {
+        font-size: 15px;
+        padding: 18px;
+    }
+
+    ol li {
+        padding: 10px 10px 10px 50px;
+        margin-bottom: 10px;
+    }
+
+    ol li::before {
+        width: 30px;
+        height: 30px;
+        font-size: 13px;
+        left: 10px;
+    }
+}
+
+/* Very small phones */
+@media screen and (max-width: 320px) {
+    .nav ul {
+        flex-direction: column;
+    }
+
+    .nav ul li {
+        width: 100%;
+    }
+
+    .nav ul li a {
+        display: block;
+        text-align: center;
+        padding: 15px;
+    }
+
+    h2 {
+        font-size: 16px;
+    }
+
+    ol li {
+        font-size: 14px;
+    }
+}
+
+/* Smooth animations */
+* {
+    transition: background-color 0.3s ease;
+}

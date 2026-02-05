@@ -1,5 +1,5 @@
 
-<?php require("hanektoot/varsketeade.php"); ?>
+<?php require("p2is.php"); ?>
     <h2>Esmaspäev</h2>
     <p>
     <ol>
@@ -10,4 +10,4 @@
 
     </ol>
     </p>
-<?php require("mobiilimall/jalus.php"); ?>
+<?php require("hanektoot/jalus.php"); ?>
