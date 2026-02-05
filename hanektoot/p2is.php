@@ -5,18 +5,18 @@
     <meta name="viewport" content="width=device-width; initial-scale=1.0;
 maximum-scale=1.0;">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Tunniplaan</title>
-    <link href="../mobiilimall/kujundus.css" rel="stylesheet" type="text/css" />
+    <title>Anektoodid</title>
+    <link href="../hanektoot/kujundus.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 <div id="header">
     <div class="nav">
         <ul>
-            <li><a href="../mobiilimall/esmaspaev.php">E</a></li>
-            <li><a href="../mobiilimall/teisipaev.php">T</a></li>
-            <li><a href="../mobiilimall/kolmapaev.php">K</a></li>
-            <li><a href="../mobiilimall/neljapaev.php">N</a></li>
-            <li><a href="../mobiilimall/reede.php">R</a></li>
+            <li><a href="../hanektoot/anektoot1.php">1</a></li>
+            <li><a href="../hanektoot/anektoot2.php">2</a></li>
+            <li><a href="../hanektoot/anektoot3.php">3</a></li>
+            <li><a href="../hanektoot/anektoot4.php">4</a></li>
+            <li><a href="../hanektoot/anektoot5.php">5</a></li>
         </ul>
     </div>
 </div>

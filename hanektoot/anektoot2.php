@@ -1,12 +1,12 @@
-<?php require("hanektoot/p2is.php"); ?>
-    <h2>Esmaspäev</h2>
+<?php require("p2is.php"); ?>
+    <h2>Anektoot 2</h2>
     <p>
     <ol>
 
-        <li>    <h3>Kaks meest</h3>
-            <p>Kaks meest vaidlevad, kas siin on üks või kaks puud. Kolmas mees tuleb baarist välja ja ütleb: "Tulge eest, ma lähen metsa kusele!"</p>
+        <li>    <h3>Kaks kirpu</h3>
+            <p>Kaks kirpu tulevad saloonist välja ja näevad koera. Üks küsib, kas lähme jala või võtame takso?"</p>
         </li>
 
     </ol>
     </p>
-<?php require("hanektoot/jalus.php"); ?>
+<?php require("jalus.php"); ?>
